@@ -11,7 +11,6 @@ class supermercado:
         self._pasillo()
         self._caja()
         #self._estado()
-
     
     def _pasillo(self):
         print(f'buscando producto')
@@ -21,6 +20,10 @@ class supermercado:
     def _caja(self, estado=0):
         if capacidad == 'libre':
             print(f'La caja esta libre, puede pasar')
+            time.sleep(1)
+            print('Compra realizada')
+            time.sleep(1)
+            print(f'Logró comprar {item}')
 
         elif capacidad == 'lleno':
             while estado != 3:
